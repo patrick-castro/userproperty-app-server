@@ -1,5 +1,5 @@
 // Local imports
-import User from '../models/user';
+const User = require('../models/user');
 
 const Query = {
   users: async (parent, { searchString }) => {
@@ -20,4 +20,4 @@ const Query = {
   },
 };
 
-export default Query;
+module.exports = Query;

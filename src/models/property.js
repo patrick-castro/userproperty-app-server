@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const propertySchema = mongoose.Schema({
   street: {
@@ -33,4 +33,5 @@ const propertySchema = mongoose.Schema({
   },
 });
 
-export default mongoose.model('Property', propertySchema);
+const Property = mongoose.model('Property', propertySchema);
+module.exports = Property;

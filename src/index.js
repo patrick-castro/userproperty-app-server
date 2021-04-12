@@ -1,18 +1,18 @@
-import express from 'express';
-import { ApolloServer } from 'apollo-server-express';
+const express = require('express');
+const { ApolloServer } = require('apollo-server-express');
 
 // Local imports
-import './db/mongoose'; // Starts the connection with mongoose
-import typeDefs from './schema/schema';
-import Query from './resolvers/Query';
-import User from './resolvers/User';
+require('./db/mongoose'); // Starts the connection with mongoose
+const typeDefs = require('./schema/schema');
+const Query = require('./resolvers/Query');
+const User = require('./resolvers/User');
 
 const resolvers = {
   Query,
   User,
 };
 
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 
 const startApolloServer = async () => {
   const app = express();

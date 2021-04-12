@@ -1,5 +1,5 @@
 // Local imports
-import Property from '../models/property';
+const Property = require('../models/property');
 
 const User = {
   // Returns the properties associated with the user
@@ -13,4 +13,4 @@ const User = {
   },
 };
 
-export default User;
+module.exports = User;

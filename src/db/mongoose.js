@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 // Wrapped around the async block to wait for the mongoose to finish
 // connecting to the mongodb data before connecting to express
