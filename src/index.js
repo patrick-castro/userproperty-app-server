@@ -12,6 +12,8 @@ const resolvers = {
   User,
 };
 
+const port = process.env.PORT;
+
 const startApolloServer = async () => {
   const app = express();
   const server = new ApolloServer({
@@ -22,8 +24,10 @@ const startApolloServer = async () => {
 
   server.applyMiddleware({ app });
 
-  await new Promise((resolve) => app.listen({ port: 4000 }, resolve));
-  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
+  await new Promise((resolve) => app.listen({ port }, resolve));
+  console.log(
+    `🚀 Server ready at http://localhost:${port}${server.graphqlPath}`
+  );
   return { server, app };
 };
 
