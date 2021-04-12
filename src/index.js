@@ -6,10 +6,12 @@ require('./db/mongoose'); // Starts the connection with mongoose
 const typeDefs = require('./schema/schema');
 const Query = require('./resolvers/Query');
 const User = require('./resolvers/User');
+const Mutation = require('./resolvers/Mutation');
 
 const resolvers = {
   Query,
   User,
+  Mutation,
 };
 
 const port = process.env.PORT || 4000;
