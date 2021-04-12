@@ -19,6 +19,7 @@ const typeDefs = gql`
 
   type Query {
     users(searchString: String!): [User!]!
+    allUsers: [User!]!
   }
 `;
 

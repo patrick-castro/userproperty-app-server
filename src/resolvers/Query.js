@@ -18,6 +18,14 @@ const Query = {
       throw new Error(err);
     }
   },
+  allUsers: async (parent, args, ctx) => {
+    try {
+      const users = await User.find({});
+      return users;
+    } catch (error) {
+      throw new Error(err);
+    }
+  },
 };
 
 module.exports = Query;
