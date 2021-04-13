@@ -5,6 +5,7 @@ const typeDefs = gql`
     id: ID!
     firstName: String!
     lastName: String!
+    fullName: String!
     properties: [Property!]! # GraphQL Object Type
   }
 

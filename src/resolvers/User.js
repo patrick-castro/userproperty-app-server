@@ -11,6 +11,9 @@ const User = {
       throw new Error(err);
     }
   },
+  fullName: async ({ firstName, lastName }, args, ctx) => {
+    return `${firstName} ${lastName}`;
+  },
 };
 
 module.exports = User;
